@@ -118,6 +118,7 @@ obj-$(CONFIG_TOUCHSCREEN_ST_FTS_V521) += fts_521/
 obj-$(CONFIG_TOUCHSCREEN_XIAOMI_TOUCHFEATURE) += xiaomi/
 obj-$(CONFIG_TOUCHSCREEN_FTS)		+= ft8719_touch_f7b/
 obj-$(CONFIG_TOUCHSCREEN_FTS) += focaltech_spi/
+obj-$(CONFIG_TOUCHSCREEN_GOODIX_BRL) += gt9897t/
 obj-$(CONFIG_TOUCHSCREEN_NVT_F7B)	+= nvt_touch_f7b/
 obj-$(CONFIG_TOUCHSCREEN_NVT_F7B)	+= lct_ctp_selftest.o
 obj-$(CONFIG_TOUCHSCREEN_NVT_F7B)	+= lct_tp_info.o
