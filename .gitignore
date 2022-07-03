@@ -33,6 +33,7 @@
 *.order
 *.patch
 *.s
+*.sh
 *.so
 *.so.dbg
 *.su
