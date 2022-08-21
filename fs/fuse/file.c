@@ -986,7 +986,6 @@ static ssize_t fuse_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
 	struct fuse_file *ff = iocb->ki_filp->private_data;
 	ssize_t ret_val;
 #endif /* CONFIG_FUSE_FS_SHORTCIRCUIT */
-	struct fuse_file *ff = iocb->ki_filp->private_data;
 
 	if (fuse_is_bad(inode))
 		return -EIO;
@@ -1260,7 +1259,6 @@ static ssize_t fuse_file_write_iter(struct kiocb *iocb, struct iov_iter *from)
 	struct inode *inode = mapping->host;
 	ssize_t err;
 	loff_t endbyte = 0;
-	struct fuse_file *ff = file->private_data;
 
 	if (ff->passthrough.filp)
 		return fuse_passthrough_write_iter(iocb, from);
@@ -2182,7 +2180,6 @@ static int fuse_file_mmap(struct file *file, struct vm_area_struct *vma)
 	if (ff->rw_lower_file)
 		return fuse_shortcircuit_mmap(file, vma);
 #endif /* CONFIG_FUSE_FS_SHORTCIRCUIT */
-	struct fuse_file *ff = file->private_data;
 
 	if (ff->passthrough.filp)
 		return fuse_passthrough_mmap(file, vma);
